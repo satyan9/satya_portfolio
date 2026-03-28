@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cyan: #00E5FF;
+  --color-brand-gold: #FFB700;
+  --color-brand-dark: #050A0F;
+  --color-brand-light: #FFFFFF;
+  --font-syne: 'Syne', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-brand-dark);
+  color: var(--color-brand-light);
+  overflow-x: hidden;
+  cursor: none; /* For custom cursor */
+}
+
+h1, h2, h3, h4, h5, h6, .font-syne {
+  font-family: var(--font-syne);
+}
+
+/* Base link overrides for custom cursor */
+a, button {
+  cursor: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-cyan);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-gold);
+}
+
+/* Subtle dot grid pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(0, 229, 255, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
