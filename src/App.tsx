@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  Terminal, Database, MapPin, Mail, Phone, ExternalLink, Download, 
+import {
+  Terminal, Database, MapPin, Mail, Phone, ExternalLink, Download,
   ChevronUp, Server, BarChart, Code2, GraduationCap, Award, Star, CloudSnow, Clock, Send
 } from 'lucide-react';
 import clsx from 'clsx';
@@ -21,12 +21,12 @@ export default function App() {
     // Scroll animations global setup
     const timer = setTimeout(() => {
       setLoading(false);
-      
+
       // Delay initialization so DOM completes
       setTimeout(() => {
         gsap.utils.toArray('.reveal').forEach((elem: any) => {
-          gsap.fromTo(elem, 
-            { y: 50, opacity: 0 }, 
+          gsap.fromTo(elem,
+            { y: 50, opacity: 0 },
             {
               y: 0, opacity: 1, duration: 1, ease: "power3.out",
               scrollTrigger: {
@@ -93,13 +93,13 @@ function CustomCursor() {
 
   return (
     <div className="hidden lg:block">
-      <div 
-        ref={trailRef} 
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#00E5FF]/40 pointer-events-none z-[999] -translate-x-1/2 -translate-y-1/2 shadow-[0_0_20px_rgba(0,229,255,0.2)]" 
+      <div
+        ref={trailRef}
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#00E5FF]/40 pointer-events-none z-[999] -translate-x-1/2 -translate-y-1/2 shadow-[0_0_20px_rgba(0,229,255,0.2)]"
       />
-      <div 
-        ref={cursorRef} 
-        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[#00E5FF] pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 shadow-[0_0_10px_rgba(0,229,255,0.8)]" 
+      <div
+        ref={cursorRef}
+        className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[#00E5FF] pointer-events-none z-[1000] -translate-x-1/2 -translate-y-1/2 shadow-[0_0_10px_rgba(0,229,255,0.8)]"
       />
     </div>
   );
@@ -137,9 +137,9 @@ function Navbar() {
         </a>
         <div className="hidden md:flex space-x-8">
           {sections.map(sec => (
-            <a 
-              key={sec} 
-              href={`#${sec}`} 
+            <a
+              key={sec}
+              href={`#${sec}`}
               className={cn(
                 "uppercase tracking-widest text-xs font-semibold transition-all hover:text-[#00E5FF] hover:drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]",
                 active === sec ? "text-[#00E5FF] drop-shadow-[0_0_8px_rgba(0,229,255,0.8)]" : "text-gray-400"
@@ -156,21 +156,21 @@ function Navbar() {
 
 function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const titles = ["Data Engineer", "ETL Developer", "Cloud Architect"];
+  const titles = ["Data Engineer", "Full Stack Developer", "Cloud Architect"];
   const [titleIdx, setTitleIdx] = useState(0);
 
   useEffect(() => {
     // Particle background basic implementation using GSAP / DOM elements
     const ctx = gsap.context(() => {
-       gsap.to(".glitch-text", {
-         x: () => Math.random() * 4 - 2,
-         y: () => Math.random() * 4 - 2,
-         opacity: () => Math.random() * 0.5 + 0.5,
-         duration: 0.1,
-         repeat: -1,
-         yoyo: true,
-         delay: Math.random() * 2
-       });
+      gsap.to(".glitch-text", {
+        x: () => Math.random() * 4 - 2,
+        y: () => Math.random() * 4 - 2,
+        opacity: () => Math.random() * 0.5 + 0.5,
+        duration: 0.1,
+        repeat: -1,
+        yoyo: true,
+        delay: Math.random() * 2
+      });
     }, containerRef);
     return () => ctx.revert();
   }, []);
@@ -195,7 +195,7 @@ function Hero() {
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">SATYANARAYANA REDDY</span>
           <span className="block text-[#00E5FF] drop-shadow-[0_0_15px_rgba(0,229,255,0.5)]">KOLAGATLA</span>
         </h1>
-        
+
         <div className="h-12 mb-8 flex items-center justify-center gap-3 text-xl md:text-3xl font-medium text-gray-300">
           <Terminal className="text-[#00E5FF] w-6 h-6 md:w-8 md:h-8 animate-pulse" />
           <span className="typing-text border-r-4 border-[#00E5FF] pr-2 animate-pulse transition-all duration-300">
@@ -235,7 +235,7 @@ function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="text-gray-300 space-y-6 text-lg leading-relaxed reveal">
             <p>
-              I am a results-driven Data Engineer with over 2 years of experience specializing in crafting robust, scalable, and ultra-efficient data architectures. 
+              I am a results-driven Data Engineer with over 2 years of experience specializing in crafting robust, scalable, and ultra-efficient data architectures.
             </p>
             <p>
               Armed with a strong foundation in Cloud Platforms and advanced ETL paradigms, I specialize in navigating complex data landscapes to deliver actionable insights that power enterprise success.
@@ -247,11 +247,11 @@ function About() {
 
           <div className="bg-[#050A0F] border border-white/10 p-8 rounded-xl shadow-[0_0_30px_rgba(0,0,0,0.5)] relative group reveal overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#FFB700]/10 blur-[50px] rounded-full group-hover:bg-[#FFB700]/20 transition-all" />
-            
+
             <h3 className="text-[#FFB700] font-syne text-xl font-bold mb-8 flex items-center gap-3">
               <BarChart /> OPERATIONAL STATS
             </h3>
-            
+
             <div className="grid grid-cols-2 gap-8">
               <div>
                 <div className="text-4xl font-black text-white mb-2 group-hover:text-[#00E5FF] transition-colors">2+</div>
@@ -305,8 +305,8 @@ function Skills() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {category.items.map((skill, i) => (
-                  <span 
-                    key={i} 
+                  <span
+                    key={i}
                     className="skill-chip px-5 py-2.5 bg-white/5 border border-white/10 rounded-sm text-sm text-gray-300 
                                transition-all duration-300 hover:bg-[#00E5FF]/10 hover:text-[#00E5FF] hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.4)] cursor-default"
                   >
@@ -355,7 +355,7 @@ function Experience() {
         <div className="relative border-l-2 border-[#00E5FF]/30 ml-4 md:mx-auto md:w-full md:border-l-0">
           {/* Central Line for desktop */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#00E5FF]/20 -translate-x-1/2" />
-          
+
           {experienceData.map((exp, idx) => (
             <div key={idx} className={cn(
               "mb-16 relative flex md:justify-between items-center w-full reveal",
@@ -368,20 +368,20 @@ function Experience() {
                 idx % 2 === 0 ? "md:text-left" : "md:text-right"
               )}>
                 <div className="bg-[#050A0F]/80 backdrop-blur-sm border border-white/10 p-8 rounded-lg transition-all duration-300 hover:border-[#FFB700]/50 hover:shadow-[0_0_30px_rgba(255,183,0,0.15)] group-hover:-translate-y-2">
-                  <div className={cn("text-[#00E5FF] text-sm font-bold tracking-wider mb-2 flex items-center gap-2", 
+                  <div className={cn("text-[#00E5FF] text-sm font-bold tracking-wider mb-2 flex items-center gap-2",
                     idx % 2 !== 0 && "md:justify-end"
                   )}>
                     <Clock size={16} /> {exp.date}
                   </div>
                   <h3 className="font-syne text-2xl font-bold text-white mb-2">{exp.role}</h3>
                   <h4 className="text-[#FFB700] font-medium tracking-wide text-sm uppercase mb-6">{exp.company}</h4>
-                  <ul className={cn("space-y-3 text-gray-400 text-sm font-medium", 
+                  <ul className={cn("space-y-3 text-gray-400 text-sm font-medium",
                     idx % 2 !== 0 && "md:text-right"
                   )}>
                     {exp.desc.map((item, i) => (
                       <li key={i} className="flex gap-3">
-                         <span className={cn("text-[#FFB700] shrink-0 mt-1", idx % 2 !== 0 && "md:hidden")}>▹</span>
-                         <span>{item}</span>
+                        <span className={cn("text-[#FFB700] shrink-0 mt-1", idx % 2 !== 0 && "md:hidden")}>▹</span>
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -397,39 +397,40 @@ function Experience() {
 
 const projectsData = [
   {
-    title: "Enterprise ODS & Secure ETL",
-    desc: "Re-engineered 600+ ETL pipelines with Dataflow & Data Fusion. 99.8% data accuracy. CI/CD with Cloud Build. Dashboards in Tableau + Looker Studio.",
-    tags: ["Dataflow", "Data Fusion", "Cloud Build", "Tableau"]
+    title: "Enterprise ODS & Secure ETL Optimization",
+    desc: "Re-engineered 600+ ETL pipelines with Dataflow & Data Fusion achieving 99.8% data accuracy. Implemented CI/CD with Cloud Build, and built Tableau + Looker Studio dashboards for real-time insights.",
+    tags: ["Dataflow", "Data Fusion", "Cloud Build", "Tableau", "Looker Studio"],
+    featured: true
   },
   {
     title: "Telecom Customer Data Migration",
-    desc: "On-prem to GCP migration. Custom Python DAGs in Airflow. Incremental loads, multi-tier GCS staging. Achieved 99.9% data integrity.",
-    tags: ["GCP", "Python", "Airflow", "GCS"]
+    desc: "Migrated on-prem telecom data to GCP. Built custom Python DAGs in Airflow for orchestration, incremental loads, and multi-tier GCS staging — achieving 99.9% data integrity at scale.",
+    tags: ["GCP", "Airflow", "Python", "GCS", "BigQuery"],
+    featured: true
+  },
+  {
+    title: "Highway Traffic Heatmap Analytics",
+    desc: "Live traffic monitoring platform deployed on Google Cloud Run. Retrieves real-time vehicle speed data from BigQuery and highway camera APIs to generate dynamic heatmaps diagnosing slow-moving congestion.",
+    tags: ["BigQuery", "Cloud Run", "APIs", "Analytics"],
+    featured: true
+  },
+  {
+    title: "skillpilot AI",
+    desc: "A premium, full-stack assessment platform featuring AI-driven feedback and a Monaco-powered IDE. Built with React (Vite) and Node.js (Express), it orchestrates secure recruitment workflows via JWT/OTP and handles real-time submissions with MongoDB and OpenAI integration.",
+    tags: ["Full Stack", "AI/ML", "React", "Node.js", "MongoDB"],
+    featured: true
   },
   {
     title: "Airline Booking Platform",
-    desc: "Frontend web app with robust flight search, interactive seat selection, and reliable payment gateway integration.",
-    tags: ["Web App", "Frontend", "API"]
-  },
-  {
-    title: "Global Currency Converter",
-    desc: "Real-time currency conversion using live exchange rate APIs with a highly responsive user interface.",
-    tags: ["REST API", "Responsive"]
-  },
-  {
-    title: "Country & Capital Explorer",
-    desc: "REST Countries API integration with Bootstrap responsive design for seamless global exploration.",
-    tags: ["Bootstrap", "REST API", "Frontend"]
-  },
-  {
-    title: "Weather Report Application",
-    desc: "React.js application featuring real-time weather data API integration and global location search functionality.",
-    tags: ["React.js", "API", "Search"]
+    desc: "Frontend web application featuring flight search, seat selection UI, and payment gateway integration — built for seamless user experience across devices.",
+    tags: ["Web App", "Frontend", "API", "JavaScript"],
+    featured: false
   },
   {
     title: "Stress Analysis Device",
-    desc: "Arduino Uno + heartbeat sensor predicting stress levels using embedded C in a hardware-software bridge.",
-    tags: ["Arduino", "Embedded C", "IoT"]
+    desc: "Hardware + software project using Arduino Uno and a heartbeat sensor to measure HRV and predict stress levels algorithmically using embedded C programming.",
+    tags: ["Arduino Uno", "Embedded C", "Sensor", "HRV"],
+    featured: true
   }
 ];
 
@@ -449,27 +450,54 @@ function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((proj, idx) => (
-            <div key={idx} className="group relative perspective-1000 reveal">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF] to-[#FFB700] rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500" />
-              <div className="relative h-full bg-[#050A0F] border border-white/10 rounded-xl p-8 transition-transform duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1 flex flex-col justify-between">
+            <div key={idx} className={cn(
+              "group relative perspective-1000 reveal",
+              proj.featured && "md:col-span-2 lg:col-span-1"
+            )}>
+              <div className={cn(
+                "absolute inset-0 bg-gradient-to-br from-[#00E5FF] to-[#FFB700] rounded-xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500",
+                proj.featured && "opacity-20"
+              )} />
+              <div className={cn(
+                "relative h-full bg-[#050A0F] border rounded-xl p-8 transition-all duration-500 transform group-hover:-translate-y-2 group-hover:rotate-1 flex flex-col justify-between",
+                proj.featured ? "border-[#00E5FF]/50 shadow-[0_0_30px_rgba(0,229,255,0.15)]" : "border-white/10"
+              )}>
                 <div>
-                  <div className="flex justify-between items-start mb-6 text-[#00E5FF]">
-                    <Database size={32} />
-                    <ExternalLink size={20} className="text-gray-500 group-hover:text-white transition-colors cursor-pointer" />
+                  <div className="flex justify-between items-start mb-6">
+                    <div className="text-[#00E5FF]">
+                      {proj.title === "skillpilot AI" ? <Code2 size={40} /> : <Database size={32} />}
+                    </div>
+                    {proj.featured && (
+                      <span className="text-[10px] font-black tracking-widest bg-[#00E5FF] text-[#050A0F] px-4 py-1.5 rounded-full animate-pulse uppercase shadow-[0_0_15px_rgba(0,229,255,0.4)]">
+                        Featured Project
+                      </span>
+                    )}
+                    {!proj.featured && <ExternalLink size={20} className="text-gray-500 group-hover:text-white transition-colors cursor-pointer" />}
                   </div>
+
+                  {proj.featured && (
+                    <div className="mb-6 rounded-lg overflow-hidden border border-[#00E5FF]/20 group-hover:border-[#00E5FF]/50 transition-colors bg-[#080E14]">
+                      <img
+                        src="/src/assets/skillpilot.png"
+                        alt="Project Preview"
+                        className="w-full h-40 object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+
                   <h3 className="font-syne text-xl font-bold text-white mb-4 group-hover:text-[#FFB700] transition-colors">{proj.title}</h3>
                   <p className="text-gray-400 text-sm leading-relaxed mb-8">{proj.desc}</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {proj.tags.map((tag, i) => (
-                    <span key={i} className="text-[#00E5FF] text-xs font-bold tracking-wider hover:underline cursor-pointer">{tag}</span>
+                    <span key={i} className="text-[#00E5FF] text-[10px] font-black uppercase tracking-wider bg-[#00E5FF]/5 px-2 py-1 rounded-sm border border-[#00E5FF]/20 hover:border-[#00E5FF] transition-colors cursor-pointer">{tag}</span>
                   ))}
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="mt-12 text-center md:hidden reveal">
           <a href="https://github.com" className="inline-flex items-center gap-2 text-[#00E5FF] hover:text-white transition-colors uppercase tracking-widest text-sm font-bold">
             View Github <ExternalLink size={16} />
@@ -496,7 +524,7 @@ function Certifications() {
               <p className="text-[#FFB700] text-sm uppercase tracking-wider">Professional Data Engineer</p>
             </div>
           </div>
-          
+
           <div className="bg-[#050A0F] border border-white/10 p-8 flex items-start gap-6 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all reveal group">
             <Code2 className="text-gray-300 group-hover:text-white group-hover:scale-110 transition-all shrink-0" size={40} />
             <div>
@@ -504,7 +532,7 @@ function Certifications() {
               <p className="text-gray-400 text-sm tracking-wide">Algorithmic Problem Solving Target</p>
             </div>
           </div>
-          
+
           <div className="bg-[#050A0F] border border-white/10 p-8 flex items-start gap-6 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all reveal group">
             <Star className="text-gray-300 group-hover:text-white group-hover:scale-110 transition-all shrink-0" size={40} />
             <div>
@@ -533,7 +561,7 @@ function Education() {
         <h2 className="font-syne text-3xl font-bold mb-12 text-center text-white reveal">
           <span className="text-[#FFB700]">/</span> ACADEMICS
         </h2>
-        
+
         <div className="bg-gradient-to-r from-white/5 to-transparent border border-white/10 p-8 md:p-12 rounded-lg flex flex-col md:flex-row items-center gap-8 reveal hover:border-[#00E5FF]/30 transition-colors">
           <div className="w-32 h-32 rounded-full border-2 border-dashed border-gray-600 flex items-center justify-center shrink-0 bg-[#050A0F]">
             <GraduationCap size={48} className="text-gray-400" />
@@ -546,7 +574,7 @@ function Education() {
               <span className="hidden sm:inline">•</span>
               <span>June 2020 – May 2024</span>
               <span className="hidden sm:inline">•</span>
-              <span className="flex items-center gap-1"><MapPin size={14}/> Guntur, India</span>
+              <span className="flex items-center gap-1"><MapPin size={14} /> Guntur, India</span>
             </div>
           </div>
         </div>
@@ -562,34 +590,34 @@ function Contact() {
         <h2 className="font-syne text-4xl md:text-5xl font-bold mb-16 text-center text-white reveal border-b border-white/10 pb-8 uppercase">
           Transmission_Link
         </h2>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="reveal">
             <h3 className="text-2xl font-syne font-bold text-white mb-8">INITIATE_HANDSHAKE</h3>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div>
-                <input 
-                  type="text" 
-                  placeholder="NAME_ID" 
+                <input
+                  type="text"
+                  placeholder="NAME_ID"
                   className="w-full bg-[#050A0F] border border-white/20 p-4 text-white focus:outline-none focus:border-[#00E5FF] focus:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all font-mono placeholder:text-gray-600"
                 />
               </div>
               <div>
-                <input 
-                  type="email" 
-                  placeholder="EMAIL_ADDRESS" 
+                <input
+                  type="email"
+                  placeholder="EMAIL_ADDRESS"
                   className="w-full bg-[#050A0F] border border-white/20 p-4 text-white focus:outline-none focus:border-[#00E5FF] focus:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all font-mono placeholder:text-gray-600"
                 />
               </div>
               <div>
-                <textarea 
-                  placeholder="PAYLOAD_MESSAGE" 
+                <textarea
+                  placeholder="PAYLOAD_MESSAGE"
                   rows={5}
                   className="w-full bg-[#050A0F] border border-white/20 p-4 text-white focus:outline-none focus:border-[#00E5FF] focus:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all font-mono placeholder:text-gray-600 resize-none"
                 />
               </div>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="group relative w-full p-4 bg-transparent border border-[#00E5FF] text-[#00E5FF] font-bold tracking-widest uppercase overflow-hidden transition-all hover:text-[#050A0F]"
               >
                 <div className="absolute inset-0 h-full w-full bg-[#00E5FF] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0" />
@@ -599,7 +627,7 @@ function Contact() {
               </button>
             </form>
           </div>
-          
+
           <div className="reveal flex flex-col justify-center">
             <h3 className="text-2xl font-syne font-bold text-white mb-8">NODE_DETAILS</h3>
             <div className="space-y-8">
@@ -612,7 +640,7 @@ function Contact() {
                   <div className="text-white font-mono text-lg">+91 8639822170</div>
                 </div>
               </a>
-              
+
               <a href="mailto:Satyanarayanareddykolagatla@gmail.com" className="flex items-center gap-6 group">
                 <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-full flex items-center justify-center group-hover:border-[#00E5FF] group-hover:shadow-[0_0_15px_rgba(0,229,255,0.3)] transition-all shrink-0">
                   <Mail className="text-gray-400 group-hover:text-[#00E5FF] transition-colors" />
@@ -622,7 +650,7 @@ function Contact() {
                   <div className="text-white font-mono md:text-lg text-sm truncate">Satyanarayanareddykolagatla@gmail.com</div>
                 </div>
               </a>
-              
+
               <div className="flex items-center gap-6 group">
                 <div className="w-14 h-14 bg-white/5 border border-white/10 rounded-full flex items-center justify-center group-hover:border-[#FFB700] group-hover:shadow-[0_0_15px_rgba(255,183,0,0.3)] transition-all shrink-0">
                   <MapPin className="text-gray-400 group-hover:text-[#FFB700] transition-colors" />
@@ -633,7 +661,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-12 flex gap-4">
               <a href="#" className="w-12 h-12 bg-white/5 flex items-center justify-center rounded-sm hover:bg-[#00E5FF] hover:text-[#050A0F] transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
@@ -674,7 +702,7 @@ function BackToTop() {
   }, []);
 
   return (
-    <button 
+    <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       className={cn(
         "fixed bottom-8 right-8 w-12 h-12 bg-[#00E5FF]/10 text-[#00E5FF] border border-[#00E5FF]/30 backdrop-blur-sm flex items-center justify-center transition-all duration-300 hover:bg-[#00E5FF] hover:text-[#050A0F] hover:shadow-[0_0_15px_rgba(0,229,255,0.5)] z-[90]",
