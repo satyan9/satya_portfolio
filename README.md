@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Satyanarayana Reddy Kolagatla — GCP Data Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance portfolio website showcasing enterprise Google Cloud Platform (GCP) Data Engineering projects, BigQuery optimizations, metadata-driven ETL frameworks, and AI enterprise search integrations.
 
-Currently, two official plugins are available:
+## 🚀 Key Highlights & Capabilities
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **BigQuery Query & Storage Optimization**: Partitioning, clustering, SQL query tuning delivering up to 85% execution speedup and 99.9% data scan reduction.
+- **Enterprise ODS Architecture**: Multi-tier data layers (Landing, Raw, Staging, Curated) with Dataplex data quality validation and Cloud Composer (Apache Airflow) DAG orchestration.
+- **AI-Powered Enterprise Search**: Integrating BigQuery with Google Cloud Discovery Engine for AI catalog indexing and search analytics.
+- **Metadata/Configuration-Driven ETL**: Reusable Python transformation frameworks powering 600+ automated pipeline tasks.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Lucide React Icons
+- **Animations**: GSAP & ScrollTrigger
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
-## Expanding the ESLint configuration
+## 📁 Repository Architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+satya_portfolio/
+├── public/                  # Static assets (Resume PDF, Favicon)
+├── src/
+│   ├── components/          # Modularized UI Components
+│   │   ├── About.tsx        # Background & Cloud Engineering focus
+│   │   ├── BackToTop.tsx    # Smooth scroll-to-top component
+│   │   ├── Certifications.tsx# GCP PDE, Azure AI, LeetCode, HackerRank
+│   │   ├── Contact.tsx      # Direct communication form & links
+│   │   ├── Education.tsx    # Academic background
+│   │   ├── Experience.tsx   # Detailed enterprise role breakdown
+│   │   ├── Footer.tsx       # Portfolio footer & copyright
+│   │   ├── GithubIcon.tsx   # Reusable SVG icon
+│   │   ├── Hero.tsx         # Immediate value proposition & stats
+│   │   ├── LinkedinIcon.tsx # Reusable SVG icon
+│   │   ├── Navbar.tsx       # Header navigation & social links
+│   │   ├── Projects.tsx     # DE & AI project cards with repo/demo links
+│   │   └── Skills.tsx       # Recalibrated technical skills matrix
+│   ├── App.css              # Custom styling tokens
+│   ├── App.tsx              # Main layout component
+│   ├── index.css            # Global CSS & Tailwind directives
+│   └── main.tsx             # React DOM entry point
+├── index.html               # Main HTML entry with SEO meta tags
+├── package.json             # Project dependencies & scripts
+└── vite.config.ts           # Vite configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Local Development Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/satyan9/satya_portfolio.git
+   cd satya_portfolio
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+## 🔗 Connect & Links
+
+- **GitHub**: [github.com/satyan9](https://github.com/satyan9)
+- **LinkedIn**: [linkedin.com/in/satyanarayana-reddy-kolagatla-data-engineer](https://www.linkedin.com/in/satyanarayana-reddy-kolagatla-data-engineer/)
+- **Email**: satyanarayanareddykolagatla@gmail.com
